@@ -39,7 +39,7 @@ a{
 a:hover{
   color: rgb(136, 136, 136);
 } 
-
+/*
 footer {
   display: flex;
   justify-content: center;
@@ -53,14 +53,14 @@ footer {
 }
 
 footer > img{
-  width: 200px;
+  width: 20px;
   margin: 0;
 }
 footer > p{
   margin: 0;
   padding-top: 0.7rem;
 }
-
+*/
 form{
   display: flex;
   flex-direction: column;
@@ -80,6 +80,10 @@ form{
   border: 0.5px solid rgb(136, 136, 136);
 }
 
+.card img {
+  width: 100%;
+}
+
 .card:hover{
   border: 0.5px solid rgb(206, 217, 142);
 }
@@ -95,28 +99,62 @@ form{
 }
 
 table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
-
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
+th, td {
+  border: 1px solid #ddd;
   padding: 8px;
+  text-align: left;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
 }
 
 .dark{
   background-color: #12121296;
   color: white;
 }
+
 .dark > a {
   color: white;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.light > a {
+  color: black;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f1f1f1;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-logo img {
+  height: 40px;
+}
+
+.footer-social a {
+  margin-left: 10px;
+}
+
+.footer-social img {
+  height: 20px;
 }
