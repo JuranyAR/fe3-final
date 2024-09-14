@@ -20,6 +20,10 @@ body {
   width: 20px;
 }
 
+.favs{
+  min-height: 480px;
+}
+
 .favButton:hover{
   background-color: #9fdcdc;
 }
@@ -206,6 +210,10 @@ th {
 
 .dark .favButton{
   background-color: #615e5e96;
+}
+
+.dark .favButton:hover {
+  background-color: #457979;
 }
 
 .light {
