@@ -4,7 +4,7 @@ import actionTypes  from './actionsTypes';
 
 export const initialState = {
   theme: 'light',
-  dentists: [],
+  dentists: null,
   favDentists: JSON.parse(localStorage.getItem('favDentists')) || [],
 };
 

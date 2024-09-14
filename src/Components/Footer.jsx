@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ContextGlobal } from './utils/global.context';
 import logo from '/images/DH.png';
 import facebook from '/images/facebook.png';
 import instagram from '/images/instagram.png';
@@ -6,8 +7,10 @@ import tiktok from '/images/tiktok.png';
 import whatsapp from '/images/whatsapp.png';
 
 const Footer = () => {
+  const { state } = useContext(ContextGlobal);
+
   return (
-    <footer className="footer">
+    <footer className={state.theme === 'dark' ? 'footer dark' : 'footer light'}>
       <div className="footer-content">
         {/* Logo */}
         <div className="footer-logo">

@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect  } from 'react'
 import { useParams } from 'react-router-dom';
 import { ContextGlobal } from '../Components/utils/global.context';
-
+import Loading from '../Components/Loading';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -12,7 +12,7 @@ const Detail = () => {
   const [dentist, setDentist] = useState(null);
 
   useEffect(() => {
-    const dentistDetail = state.dentists.find(dentist => dentist.id === parseInt(id));
+    const dentistDetail = state.dentists?.find(dentist => dentist.id === parseInt(id));
     if (dentistDetail) {
       setDentist(dentistDetail);
     } else {
@@ -25,12 +25,12 @@ const Detail = () => {
   }, [id, state.dentists]);
 
   if (!dentist) {
-    return <p>Cargando detalles del dentista...</p>;
+    return <Loading />;
   }
 
   return (
-    <>
-      <h1>Detail Dentist id </h1>
+    <div className={state.theme === 'dark' ? 'detail dark' : 'detail light'}>
+      <h1>Detail Dentist {id} </h1>
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
       <table>
@@ -57,7 +57,7 @@ const Detail = () => {
           </tr>
         </tbody>
       </table>
-    </>
+    </div>
   )
 }
 
